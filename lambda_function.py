@@ -38,7 +38,7 @@ def lambda_handler(event, context):
     
         result = result['Body'].read().decode('utf-8')
         
-        # Apply inverse transformation to get the rental count
+        # Check result for age
         print(result)
         result = result.split(',')
         predictions = [float(r) for r in result]
